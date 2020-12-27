@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Mulish&display=swap" rel="stylesheet" />
+    <link href="estilo.css" rel="stylesheet" />
+    <script src="script.js"></script>
+    <title>Consultar</title>
+    
+    <meta charset="utf-8">
+</head>
+
+<body onload="Semanaselected()">
+    <div class="main">
+        
+        <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>
+       <!-- tabela 4 colunas 5linhas -->    
+
+      <table id="OccuTable">
+  <tr>
+    <th></th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+</table>
+      
+        
+   <!-- botão +detalhes -->  
+        <a href="dashboard.html">
+        <button class="detalhes" type="button">+detalhes</button>
+        </a>
+   <!-- sininho -->
+           <button class="notificacoes" > 
+            <img src="imagens/notificacoes.png"> </button>
+  
+   <!-- Menu de tempo -->         
+    <div id="menutempo">
+            <button id="semana" onclick="showSemana()" onload="selected()">Esta semana</button>
+            <button id="mes"onclick="showMes()">Este mês</button>
+            <button id="ano" onclick="showAno()">Este ano</button>
+        </div>                  
+        
+   <!--Semana-->
+   <div id="semana_occ">
+    <!--conteudo da pagina-->
+     </div>
+     
+    <!--Mes-->
+   <div id="mes_occ">
+   <!--conteudo da pagina-->
+     </div> 
+    <!--Ano-->
+      <div id="ano_occ">
+    <!--conteudo da pagina-->
+     </div> 
+    
+    
+   <!-- pesquisar ocorrencia -->
+    <div>
+            <span>
+                <input type="text" class="selecionar_ocorr"  id="selecionarOccu" onkeyup="myFunctionOccu()" placeholder="Pesquisar nº da Ocorrência">
+                <button id="icon_pesquisar">
+                    <img src="imagens/consultar.png" style="margin-top: 9px">
+                </button>
+                </input>
+            </span>
+    </div>
+ 
+  <!-- menu inferior-->      
+        
+         <a href="menu_ocorrencias.html">
+            <button class="voltar"> 
+            <img src="imagens/voltar.png">
+            </button>
+            </a>
+        
+            <a href="menu_auditor.html">
+            <button class="home">
+            <img src="imagens/home.png">
+            </button>
+            </a>
+            
+            <button class="confirmar">
+            <img src="imagens/confirmar.png">
+            </button>
+            </a>
+            <script type="text/javascript" src="./controller/ocurrences.controller.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

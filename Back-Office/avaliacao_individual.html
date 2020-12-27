@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Mulish&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="estilo.css" rel="stylesheet" />
+        <script src="script.js"></script>
+    <title>Avaliação Individual</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="main">
+        
+        <!-- Menu de tempo -->         
+        <div id="menutempo">
+            <button id="semana">Esta semana</button>
+            <button id="mes">Este mês</button>
+            <button id="ano">Este ano</button>
+        </div>
+        
+        <!-- Parâmetros -->
+        <label class="assiduidade">
+                Assiduidade
+        </label>
+        
+        <label class="pontualidade">
+                Pontualidade
+        </label>
+        
+        <label class="eficacia">
+                Eficácia
+        </label>
+        
+        <label class="organizacao">
+                Organização
+        </label>
+        
+        <label class="comunicacao">
+                Comunicação
+        </label>
+        
+        <!-- Sliders --> 
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" id="slider1">
+            <input type="range" min="1" max="100" value="50" id="slider2">
+            <input type="range" min="1" max="100" value="50" id="slider3">
+            <input type="range" min="1" max="100" value="50" id="slider4">
+            <input type="range" min="1" max="100" value="50" id="slider5">
+        </div>
+
+
+        <!-- Pesquisar Profissional -->
+        <input type="text" class="pesquisa_nome" placeholder="Nome Prof.">
+        
+        <!-- Botão de notificações -->
+        <button class="notificacoes" onclick="myFunction()">
+            <img src="imagens/notificacoes.png">  
+        </button>
+        
+        
+        <!-- Estrelas -->
+        <div id="rating">
+			<input type="radio" name="star_1" id="star1" value="1"><label for="star1"></label>
+			<input type="radio" name="star_1" id="star2" value="2"><label for="star2"></label>
+			<input type="radio" name="star_1" id="star3" value="3"><label for="star3"></label>
+			<input type="radio" name="star_1" id="star4" value="4"><label for="star4"></label>
+			<input type="radio" name="star_1" id="star5" value="5"><label for="star5"></label>
+		</div>
+        
+    
+
+        <!-- Barra de Navegação -->
+        <a href="menu_avaliacao.html">
+            <button class="voltar"> 
+                <img src="imagens/voltar.png">
+            </button>
+        </a>
+        
+        <a href="menu_auditor.html">
+            <button class="home">
+                <img src="imagens/home.png">
+            </button>
+        </a>
+        
+        <a href="menu_auditor.html">
+            <button class="confirmar"> <!-- ver o que tem de fazer-->
+                <img src="imagens/confirmar.png">
+            </button>
+        </a>
+        
+    </div>
+</body>
+
+</html>

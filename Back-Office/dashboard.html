@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mulish&display=swap" rel="stylesheet" />
+    <link href="dashboard.css" rel="stylesheet" />
+        <script src="script.js"></script>
+    <title>Dashboard</title>
+     <script src="script.js"></script>
+    <meta charset="utf-8">
+    
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   
+    <script>
+    	/* global google*/
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+  
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Grau', 'Satisfacao'],
+          ['Positivo',     9],
+          ['Satisfatório',      4],
+          ['Negativo',  2],
+        ]);
+
+         var options = {
+				'width': 370,
+				'height': 370,
+				backgroundColor: 'transparent',
+				slices: { 0: { color: '#0090ff' }, 1: { color: '#0061ae' }, 2: { color: '002b4c' } }
+			};
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    
+    <style>
+    #chart_wrap{
+      position: relative;
+      left:0;
+      right:30px;
+      padding-bottom: 100%;
+      height: 0;
+      overflow: hidden;
+    }  
+    
+    #piechart{
+     position: absolute;
+     top:95px;
+     left:-35px;
+     right:50px;
+     width:365px;
+     height:300px;
+    }
+ </style>
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="v70_15"></div>
+        <!--Label testemunhas --> 
+        <label class="text_testemunhas">Testemunhas</label>
+        <label class="n_testemunhas"> <label id="text_35">35</label> 
+        </label>  
+        <!--Label feridos -->  
+        <label class="text_feridos">Feridos</label>
+         <label class="n_feridos">   <label id="text_12">12</label onload='saveoccurrences()'>   </label>  
+       
+  <!--Charts sem js,fazer! -->       
+      
+            <div id="chart_wrap">
+     <div id="piechart"></div>      
+    </div> 
+        
+ <!--gps--> 
+ 
+     <!--butom icon gps -->  
+<button id="gps" onclick="getLocation()">
+            <img src="imagens/gps.png"> </button>
+
+   <!--lable de coordenadas -->  
+<lable id ="coordenadas">Coordenadas</lable>
+
+<script>
+var x = document.getElementById("coordenadas");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    document.getElementById("coordenadas").style.lineHeight = "1.5em";
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+ 
+ 
+ 
+ 
+        <div class="border_gps"></div>
+    
+    
+    <div class="mapouter">
+        <div class="gmap_canvas">
+            <iframe width="356" height="146" id="gmap_canvas" src="https://maps.google.com/maps?q=porto%2C%20portugal&t=&z=5&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                
+            </iframe>
+            <a href="https://embedgooglemap.net/127/">found</a>
+            </div>
+            <style>
+            .mapouter{
+            position:relative;
+            text-align:right;
+            height:146px;
+            width:356px;
+            left:10px;
+            }
+            .gmap_canvas {
+            overflow:hidden;
+            background:none!important;
+            height:146px;
+            width:356px;
+            border: 3px solid rgba(0, 97, 175, 1);
+            border-radius: 10px;    
+            }
+            </style>
+            </div> 
+    
+
+    <!-- calendario -->
+      <input class="dataa" type="date" id="data_fim">
+      <input class="dataa" type="date" id="data_inicio">
+      <span class="risco">-</span>
+      
+    <!-- pesquisar ocorrencia-->  
+     <div>
+            <span>
+    <input type="number" class="selecionar"  placeholder="Pesquisar nº da Ocorrência">
+    <button id="icon_pesquisar">
+                    <img src="imagens/consultar.png" style="margin-top: 9px">
+                </button>
+    </input>
+            </span>
+        </div>
+  <!-- selecionar tema-->    
+     <div>
+        <span>
+                <select class="selecionar_area">
+                    <option>Gráfico</option>
+                    <option>Estatísticas</option>
+                    <option>Localizações</option>
+                </select>
+        </span>
+        </div> 
+  
+  <!-- sininho-->
+ <button id="notificacoes" onclick="myFunction()">
+            <img src="imagens/notificacoes.png" class="notificacoes"> </button> 
+  
+  
+  <!--botoes menu-->
+           <a href="menu_ocorrencias.html">
+            <button class="voltar"> 
+            <img src="imagens/voltar.png">
+            </button>
+            </a>
+        
+            <a href="menu_auditor.html">
+            <button class="home">
+            <img src="imagens/home.png">
+            </button>
+            </a>
+            
+            <button class="confirmar">
+            <img src="imagens/confirmar.png">
+            </button>
+            </a>
+
+  </div>
+  <script type="text/javascript" src="./controller/ocurrences.controller.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

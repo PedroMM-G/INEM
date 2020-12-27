@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Mulish&display=swap" rel="stylesheet" />
+    <link href="estilo.css" rel="stylesheet" />
+    <title>Registo de Ocorrências</title>
+        <script src="script.js"></script>
+    <meta charset="utf-8">
+    
+</head>
+
+<body>
+    <div class="main">
+        
+             <!--butom icon gps -->  
+<button id="gps" onclick="getLocation()">
+            <img src="imagens/gps.png"> </button>
+
+   <!--lable de coordenadas -->  
+<lable id ="coordenadas">Coordenadas</lable>
+
+<script>
+var x = document.getElementById("coordenadas");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+        document.getElementById("coordenadas").style.lineHeight = "1.5em";
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+      
+    </label>
+        
+            <input  type = "text"
+                 class = "add_profissional"
+                 placeholder = "..." >
+        
+
+         <style>
+
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>
+  
+   <table id="Table">
+   <tr>
+    <th>Nome</th>
+    <th>Número</th>
+  </tr>   
+    <tr>
+    <td>João Pedro Oliveira Lemos</td>
+    <td>92939</td>
+  </tr>
+  <tr>
+    <td>Tiago José de Almeida Lopes</td>
+    <td>94123</td>
+  </tr>
+  <tr>
+    <td>Sara Miguel Cerqueira Soares</td>
+    <td>92884</td>
+  </tr>
+  <tr>
+    <td>Maria João Ferreira Alves</td>
+    <td>92888</td>
+  </tr>
+</table>
+
+    <div>
+            <span>
+                <input type="number" class="selecionar_ocorrencia"  id="selecionarTable" onkeyup="myFunctionTable()" placeholder="Pesquisar nº da Ocorrência">
+                <button id="icon_pesquisar_registo">
+                    <img src="imagens/consultar.png" style="margin-top: 9px">
+                </button>
+                </input>
+            </span>
+    </div>
+
+            
+        
+
+    
+    
+    <!----------------- botoes ------------------------->
+
+   
+    <button class="notificacoes" onclick="myFunction()">
+            <img src="imagens/notificacoes.png"> </button>
+            
+    <button 
+    id="add">
+            <img src="imagens/add.png"></button> 
+    
+    <!--------------- tempo/data ----------------------->
+    
+    
+    <input type="time" class="horas">
+    
+    
+    <input type="date" class="data">
+    
+    
+            
+            
+    <!------------ barra de navegaçao ------------------>
+            
+            <a href="menu_ocorrencias.html">
+            <button class="voltar"> 
+            <img src="imagens/voltar.png">
+            </button>
+            </a>
+        
+            <a href="menu_auditor.html">
+            <button class="home">
+            <img src="imagens/home.png">
+            </button>
+            </a>
+            
+            
+            <button  class="perfil">
+            <img src="imagens/confirmar.png">
+            </button>
+            </a>
+            
+            
+    <span class="n_profissional">Nº Profissional:</span>
+    <script type="text/javascript" src="./controller/ocurrences.controler.js"></script>
+    
+</body>
+
+</html>

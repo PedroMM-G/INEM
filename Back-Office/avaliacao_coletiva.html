@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Mulish&display=swap" rel="stylesheet" />
+    <link href="estilo.css" rel="stylesheet" />
+        <script src="script.js"></script>
+    <title>Avaliação Coletiva</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="main">
+        
+        <!-- Selecionar Equipa -->
+        <div>
+            <span>
+                <input type="number" class="selecionar_coletiva" placeholder="Pesquisar nº da Equipa">
+                <div id="lupa">
+                    <img src="imagens/consultar.png" style="margin-top: 9px">
+                </div>
+                </input>
+            </span>
+        </div>
+        
+        <!-- Checkboxes -->
+        <input type="checkbox" id="manuseamento" name="manuseamento">
+        <input type="checkbox" id="cuidados" name="cuidados">
+        <input type="checkbox" id="planeamento" name="planeamento">
+        <input type="checkbox" id="desinfecao" name="desinfecao">
+        <input type="checkbox" id="testemunhas" name="testemunhas">
+        <input type="checkbox" id="verificar" name="verificar">
+        
+        <!-- Parâmetros de avaliação-->
+        <label id="caixa1">
+                Correto manuseamento do material
+        </label>
+        
+        <label id="caixa2">
+                Cuidados de primeira classe
+        </label>
+        
+        <label id="caixa3">
+                Planeamento básico
+        </label>
+        
+        <label id="caixa4">
+                Desinfeção de todo o local
+        </label>
+        
+        <label id="caixa5">
+                Levantamento de testemunhas
+        </label>
+        
+        <label id="caixa6">
+                Verificar danos
+        </label>
+        
+        <!-- Botão de notificações -->
+        <button class="notificacoes" onclick="myFunction()">
+            <img src="imagens/notificacoes.png">  
+        </button>
+        
+        <!-- Barra de Navegação -->
+        <a href="menu_avaliacao.html">
+            <button class="voltar"> 
+                <img src="imagens/voltar.png">
+            </button>
+        </a>
+        
+        <a href="menu_auditor.html">
+            <button class="home">
+                <img src="imagens/home.png">
+            </button>
+        </a>
+        
+        <a href="menu_auditor.html">
+            <button class="confirmar"> <!-- ver o que tem de fazer-->
+                <img src="imagens/confirmar.png">
+            </button>
+        </a>
+        
+    </div>
+</body>
+
+</html>

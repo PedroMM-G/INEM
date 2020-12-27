@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="author" content="D423">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Occurences</title>
+
+    <!-- Custom style -->
+    <link href="style.css" rel="stylesheet" />
+
+    <!-- Custom fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Mulish&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+
+    <!-- Custom scripts -->
+    <script src="secure4all.js"></script>
+
+    <!-- Custom Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- This Day Chart-->
+
+    <script type="text/javascript">
+        /* global google*/
+        google.charts.load('current', { 'packages': ['corechart'] });
+
+        google.charts.setOnLoadCallback(drawChart1);
+
+        function drawChart1() {
+            var data = google.visualization.arrayToDataTable([
+                ['Parte do Dia', 'Ocorrências'],
+                ['Manhã', 2],
+                ['Tarde', 3],
+                ['Noite', 4],
+            ]);
+
+            var options = {
+                'width': 375,
+                'height': 400,
+                backgroundColor: 'transparent',
+                is3D: true,
+                slices: { 0: { color: '#0090ff' }, 1: { color: '#0061ae' }, 2: { color: '002b4c' } }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('chartday'));
+            chart.draw(data, options);
+        }
+    </script>
+
+
+    <!-- This Week Chart -->
+    <script type="text/javascript">
+        /* global google*/
+        google.charts.load('current', { 'packages': ['corechart'] });
+
+        google.charts.setOnLoadCallback(drawChart2);
+
+        function drawChart2() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Day');
+            data.addColumn('number', 'Nº');
+            data.addRows([
+                ['Segunda', 17, ],
+                ['Terça', 11, ],
+                ['Quarta', 9, ],
+                ['Quinta', 4, ],
+                ['Sexta', 8, ],
+                ['Sábado', 10, ],
+                ['Domingo', 5, ]
+            ]);
+
+            var options = {
+                'width': 375,
+                'height': 400,
+                backgroundColor: 'transparent',
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chartweek'));
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="frame2">
+
+        <!-- Time Menu -->
+        <div id="timemenu">
+            <button id="day" onclick="showdayocc()">Este dia</button>
+            <button id="week" onclick="showweekocc()">Esta semana</button>
+            <button id="month" onclick="showmonthocc()">Este mês</button>
+        </div>
+
+        <!-- Occurrences Number -->
+        <div>
+            <span id="occnumber">Número de Ocorrências</span>
+        </div>
+
+
+        <!-- charts -->
+        <div id="charts">
+            <div id="occday" style="margin-top: 170px;">
+                <div id="chartday"></div>
+            </div>
+
+            <div id="occweek" style="margin-top: -450px;">
+                <div id="chartweek"></div>
+            </div>
+
+            <div id="occmonth">
+                <div id="numbermonth" style="margin-top: 9px;">
+                    256
+                </div>
+            </div>
+        </div>
+
+        <!-- back -->
+        <div>
+            <a href="home_page.html">
+                <button id="backocc"> 
+                    <img src="imagens/back.png">
+                </button>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="S4A2">© Secure4All</footer>
+
+    </div>
+</body>
+
+</html>

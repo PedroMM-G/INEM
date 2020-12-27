@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Mulish&display=swap" rel="stylesheet" />
+    <link href="estilo.css" rel="stylesheet" />
+        <script src="script.js"></script>
+    <title>Document</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+            <div class="main">
+            <div class="menutempo">
+            <button class="semana">Esta semana</button><button class="mes">Este mês</button><button class="ano">Este ano</button>
+        </div>
+            
+            
+            <button class="notificacoes" onclick="myFunction()">
+            <img src="imagens/notificacoes.png">
+            </button>
+            
+            
+            <img class="primeiro_gamificacao" src="imagens/felix.png">
+            <label class="texto_gamificacao1">236º Felix Mendelssohn</label>
+            
+            
+            <img class="segundo_gamificacao" src="imagens/bach.png">
+            <label class="texto_gamificacao2">235º Johann Bach</label>
+           
+            
+            <img class="terceiro_gamificacao"src="imagens/clara.png">
+            <label class="texto_gamificacao3">234º Clara Schumann</label>
+            
+            
+            <a href="sobre.html">
+            <button class="sobre">
+            <img src="imagens/sobre.png">
+            </button>
+            </a>
+            
+            <a href="menu_auditor.html">
+            <button class="confirmar"> <!--salvar não sei fazer-->
+            <img src="imagens/confirmar.png">
+            </button>
+            </a>
+            
+            <a href="menu_auditor.html">
+            <button class="voltar">
+            <img src="imagens/voltar.png">
+            </button>
+            </a>
+            
+            <label class="classificacao1">236º Lugar - Escrever relatórios</label>
+            <label class="classificacao2">235º Lugar - Recolha de testemunhas</label>
+            <label class="classificacao3">234º Lugar - Copiloto</label>
+            
+             <label class="n_estrelas1">5</label>
+            <img class="littlestar1" src="imagens/littlestar.png">
+            
+            <label class="n_estrelas2">7</label>
+            <img class="littlestar2" src="imagens/littlestar.png">
+            
+            <label class="n_estrelas3">8</label>
+            <img class="littlestar3" src="imagens/littlestar.png">
+            
+            <div>
+            <span>
+                <select class="selecionar_gamificacoes">
+                    <option>Premiados</option>
+                    <option ="sistema_de_gamificacao_2">Castigados</option>
+                       
+                </select>
+            </span>
+        </div>
+        
+            <select class="selecionar_gamificacoes" onchange="javascript:handleSelect(this)">
+            <option value="castigados">Castigados </option>
+            <option value="sistema_de_gamificacao">Premiados</option>
+            </select>
+            
+            <script type="text/javascript">
+              function handleSelect(x)
+              {
+                 window.location = x.value+".html";
+              }
+            </script>
+            
+        </div>
+            </body>
+
+</html>

@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Mulish&amp;display=swap" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+        <script src="script.js"></script>
+    <meta charset="utf-8">
+    <script src="script.js"></script>
+    <title>Perfil</title>
+</head>
+
+<body>
+        <div class="main">
+            
+            <!--BOTÕES MENU-->
+            
+            <a href="sobre.html">
+            <button class="sobre">
+            <img src="imagens/sobre.png">
+            </button>
+            </a>
+            
+            <a href="menu_auditor.html">
+            <button class="confirmar"> <!--salvar não sei fazer-->
+            <img src="imagens/confirmar.png">
+            </button>
+            </a>
+            
+            <a href="menu_auditor.html">
+            <button class="voltar">
+            <img src="imagens/voltar.png">
+            </button>
+            </a>
+            
+            <!--NOTIFICAÇÕES-->
+                        
+            <button class="notificacoes" onclick="myFunction()">
+            <img src="imagens/notificacoes.png">
+            </button>
+            
+            <!--FOTO PERFIL-->
+            
+            <div id="foto_perfil">
+            <img src="imagens/foto_perfil.png">
+            </div>
+            <button id="alterar_foto" >
+            Alterar Foto
+            </button>
+            
+            <!--CAMPOS DISPONÍVEIS-->
+            
+        <div id="nome">
+            <label class="titulo_perfil">Nome:</label>
+            <div class="box">
+            <input class="texto_perfil" type="text" id="nome1" name="nome" placeholder= "Wolfgang Mozart" required disabled="true" ></input>
+            </div>
+            <button class="editar" onclick="EnableNome()" onload= 'saveperfil()'>
+            Editar
+            </button>
+        </div>
+        
+                <div id="email">
+            <label class="titulo_perfil">Email:</label>
+            <div class="box">
+            <input class="texto_perfil" type="text" id="email1" name="email" placeholder= "wolgangMozart@gmail.com" required disabled="true" ></input>
+            </div>
+            <button class="editar" onclick="EnableMail()" onload= 'saveperfil()'>
+            Editar
+            </button>
+        </div>
+        
+                <div id="morada">
+            <label class="titulo_perfil">Morada:</label>
+            <div class="box">
+            <input class="texto_perfil" type="text" id="morada1" name="morada" placeholder= "Rua Clássica de Viena" required disabled="true" ></input>
+            </div>
+            <button class="editar" onclick="EnableMorada()" onload= 'saveperfil()'>
+            Editar
+            </button>
+        </div>
+        
+                <div id="nif">
+            <label class="titulo_perfil">NIF:</label>
+            <div class="box">
+                <input class="texto_perfil" type="text" id="nif1" name="nif" placeholder= "1837209" required disabled="true" ></input>
+            </div>
+            <button class="editar" onclick="EnableNif()" onload= 'saveperfil()'>
+            Editar
+            </button>
+        </div>
+        
+                <div id="password">
+            <label class="titulo_perfil">Password:</label>
+            <div class="box">
+            <input class="texto_perfil" type="password" id="password1" name="password" value= "mozart123" required disabled="false" ></input>
+            <button id="olho" aria-hidden="true" onclick="EnablePassword()"> <!-- js on click aparece a password, para alterar a -->
+                  <img src="imagens/olho.png">
+            </button>
+            </div>
+            <button class="editar" onclick="EnablePassword()" onload= 'saveperfil()'>
+            Editar
+            </button>
+            
+            </div>
+            
+        </div>
+        <script type="text/javascript" src="./controller/perfil.controller.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

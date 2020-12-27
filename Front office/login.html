@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="author" content="D423">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Login</title>
+
+        <!-- Custom style -->
+        <link href="style.css" rel="stylesheet" />
+
+        <!-- Custom fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Mulish&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">    
+
+        <!-- Custom scripts -->
+        <script src="secure4all.js"></script>
+
+    </head>
+
+    <body>
+
+        <div class="frame1">
+
+            <!-- Back -->
+            <a href="home_page.html">
+                <img src="imagens/left.png" style="margin:15px 15px;">
+            </a>
+
+            <!-- INEM logo -->
+            <img src="imagens/inem.png" style="width:225px;height:150px;margin:50px 65px;">
+            
+            <!-- e-mail -->
+            <div>
+                <input type="text" placeholder="e-mail" id="email"></input>
+            </div>
+
+            <!-- password -->
+            <div>
+                <input type="password" placeholder="password" id="password"></input>
+                <span>
+                    <button id="visible" aria-hidden="true" onclick="showPswd()"> 
+                        <img src="imagens/see_pass.png">
+                    </button>
+                </span>
+            </div>
+
+            <!-- Forgot Password -->
+            <span id="forgot_pass">Esqueceu-se da password?</span>   
+                     
+            <!-- Login button -->
+            <!--  <a href="D423\Frontend\Front office\home_page.html"></a> -->
+                <button id="loginbtn">Iniciar Sessão</button>
+            <!--</a>-->
+            
+            <!-- Create acc -->
+            <span id="txt">Ainda não tem uma conta?</span>
+            <a href="createacc.html">
+                <span id="clickhere">Clique Aqui</span>
+            </a>
+           
+            <!-- Footer -->
+            <footer class="S4A">© Secure4All</footer>
+            
+        </div>
+
+    </body>
+
+</html>

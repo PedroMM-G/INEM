@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Mulish&display=swap" rel="stylesheet" />
+    <link href="estilo.css" rel="stylesheet" />
+        <script src="script.js"></script>
+    <title>Sobre</title>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <div class="main">
+
+        <span class="equipa"> EQUIPA 424 </span>
+
+        <!-- Escolha da linguagem da página -->
+   
+  <!-- 
+        <button class="PTimage">
+            <img src="imagens/portugal.png">
+        </button>
+                
+        <button class="ENimage">
+            <img src="imagens/en.png">
+        </button> -->
+                 
+        <!-- Suporte, campo superior esquerdo -->
+        
+        <label class="suporte"> Suporte </label>
+      
+
+        <a href="mailto:suporte@secure4all.com?&subject=Suporte&body=Problema%20a%20reportar:" target="_top">
+        <button class="suporteicon">
+            <img src="imagens/suporteicon.png">
+            
+        </button>
+        </a>
+       
+        <!-- Botão de notificações -->
+<button class="notificacoes">
+            <img src="imagens/notificacoes.png" onclick="myFunction()">
+            </button>
+
+
+        <!-- Membros da equipa -->
+        
+        <label class="nomeope1"> João Lemos </label>
+        
+        <img class="fotolemos" src="imagens/fotolemos.png">
+
+        
+        <label class="nomeope6"> Bruno Castro </label>
+        
+        <img class="fotobruno" src="imagens/fotobruno.png">
+
+        
+        <label class="nomeope7"> Maria Alves </label>
+        
+        <img class="fotomaria" src="imagens/fotomaria.png">
+
+        
+        <label class="nomeope4"> Duarte Brandão </label>
+        
+        <img class="fotoduarte" src="imagens/fotoduarte.png">
+
+        
+            <label class="nomeope5"> Pedro Gonçalves </label>
+        
+        <img class="fotopedro" src="imagens/fotopedro.png">
+
+        
+        <label class="nomeope2"> Sara Soares </label>
+       
+        <img class="fotosara" src="imagens/fotosara.png">
+
+        
+        <label class="nomeope3"> Tiago Lopes </label>
+        
+        <img class="fototiago" src="imagens/fototiago.png">
+
+
+
+        <!-- descrições -->
+        
+            <label class="info1"> Front-End </label>
+        
+            <label class="info2"> Front-End </label>
+        
+            <label class="info3"> Front-End </label>
+        
+            <label class="info4"> Back-End </label>
+        
+            <label class="info5"> Back-End </label>
+       
+            <label class="info6"> Full-Stack </label>
+        
+            <label class="info7"> Full-Stack </label>
+       
+
+
+        <!-- Sobre -->
+
+        <img class="sobreicon" src="imagens/info.png">
+
+        
+            <label class="sobret"> Sobre </label>
+        
+            <label class="sobretxt"> O sistema desenvolvido é uma ferramenta
+                 direcionada para o auditor, permitindo-lhe o
+                 acesso a dados em tempo real, promovendo
+                 à sociedade uma nova forma de
+                 regularização das autoridades de saúde. </label>
+        
+
+
+
+        <!-- secure -->
+        
+            <label class="secure"> ©Secure4All </label>
+
+                    
+        
+        <button class="sair"> 
+        <img src="imagens/sair.png">
+        </button>
+        </a>
+        
+        <a href="menu_auditor.html">
+        <button class="home">
+        <img src="imagens/home.png">
+        </button>
+        </a>
+            
+        <a href="perfil.html">
+        <button class="perfil">
+        <img src="imagens/perfil.png">
+        </button>
+        </a>
+        
+      
+     
+   <!-- <div id="google_translate_element"></div> 
+
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'pt'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+ -->
+<!--
+<div id="google_translate_element">
+    <div class="skiptranslate goog-te-gadget" dir="ltr">
+        <div id=":0.targetLanguage">
+            <select class="goog-te-combo">
+                <option value="">Selecione o idioma</option>
+                <option value="af">africâner</option>
+                <option value="ar">árabe</option>
+            </select>
+        </div>Powered by 
+        <span style="white-space:nowrap">
+            <a class="goog-logo-link" href="https://translate.google.com" target="_blank">
+                <img src="https://www.google.com/images/logos/google_logo_41.png" width="37px" height="13px" style="padding-right: 3px">Tradutor
+                </a>
+            </span>
+        </div>
+    </div>
+     
+     
+      -->
+           <div id="google_translate_element" class="boxTradutor"></div>
+
+    <a id="portugues" href="javascript:trocarIdioma('pt')"><img alt="portugues" src="imagens/portugal.png"></a>
+    <a id="ingles" href="javascript:trocarIdioma('en')"><img alt="ingles" src="imagens/en.png"></a>
+
+
+
+    <!-- O Javascript deve vir depois -->
+
+    <script type="text/javascript">
+    var comboGoogleTradutor = null; //Varialvel global
+
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'pt',
+            includedLanguages: 'en,pt',
+            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+        }, 'google_translate_element');
+
+        comboGoogleTradutor = document.getElementById("google_translate_element").querySelector(".goog-te-combo");
+    }
+
+    function changeEvent(el) {
+        if (el.fireEvent) {
+            el.fireEvent('onchange');
+        } else {
+            var evObj = document.createEvent("HTMLEvents");
+
+            evObj.initEvent("change", false, true);
+            el.dispatchEvent(evObj);
+        }
+    }
+
+    function trocarIdioma(sigla) {
+        if (comboGoogleTradutor) {
+            comboGoogleTradutor.value = sigla;
+            changeEvent(comboGoogleTradutor);//Dispara a troca
+        }
+    }
+    
+    
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div> 
+</body>
+
+</html>
